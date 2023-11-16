@@ -1,7 +1,6 @@
 "use client";
 import { Poppins } from "next/font/google";
 import "./globals.css";
-import "antd/dist/antd.css";
 import "@mantine/core/styles.css";
 import { useEffect } from "react";
 import { useIdleTimer } from "react-idle-timer";
