@@ -1,0 +1,47 @@
+.receipt-title {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    letter-spacing: -0.022em;
+    color: #252C32;
+    margin-top: 1rem !important;
+}
+
+.receipt-tabs {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 18px;
+    margin-top: 1rem;
+}
+
+.tab_btn {
+    width: fit-content;
+    height: 30px;
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    border-bottom: 1px solid #DDE2E4;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: -0.006em;
+    color: #252C32;
+    transition: var(--transition);
+}
+
+.active_tab {
+    border-bottom: 1px solid #000;
+}
+
+.tab_btn:hover {
+    color: #000;
+}
+
+.display_tabs {
+    margin-top: 1.6rem;
+}

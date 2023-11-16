@@ -1,0 +1,81 @@
+/* MODALS STYLES */
+.modal-container {
+    width: 100vw;
+    height: 100Vh;
+    background-color: #1d1d1d3d;
+    backdrop-filter: blur(2px);
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.modal-card {
+    width: 634px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.1rem;
+    background-color: var(--white);
+    padding: 2rem 3rem;
+}
+
+.modal-card h2 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+    color: var(--black);
+    text-align: center;
+}
+
+.modal-card i {
+    font-size: 35px;
+    color: var(--pink);
+}
+
+.modal-card button {
+    width: min(307px, 70%);
+    height: 40px;
+    background-color: var(--pink);
+    border: 0;
+    outline: 0;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: center;
+    color: var(--white);
+    margin-top: 1rem;
+}
+
+.modal-card p {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: var(--black);
+}
+
+.modal-card p span {
+    font-weight: 600;
+}
+
+
+.modal-page-container {
+    width: 100vw;
+    height: 100Vh;
+    background-color: #e7e7e73d;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}

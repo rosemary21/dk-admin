@@ -1,0 +1,48 @@
+.product_table::-webkit-scrollbar {
+  width: 6px;
+  background-color: rgba(210, 210, 210, 0.403);
+}
+.product_table::-webkit-scrollbar-thumb {
+  width: 6px;
+  background-color: rgb(162, 162, 162);
+}
+
+.product_tableHeader {
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+}
+
+.product_tableData {
+  text-transform: uppercase;
+}
+
+.f-11 {
+  font-size: 11px;
+}
+
+.product-edit {
+  width: 29px;
+  height: 29px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  box-shadow: 0px 4px 8px #e6e8f0;
+  mix-blend-mode: multiply;
+  overflow: hidden;
+  margin-right: 8px;
+  font-size: 7px;
+  color: var(--blue-text);
+  transition: 400ms;
+  cursor: pointer;
+
+  i {
+    font-size: 18px;
+  }
+}
+
+.product-edit:hover {
+  box-shadow: 0px 4px 8px #1e1d1d65;
+}

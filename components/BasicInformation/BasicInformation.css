@@ -1,0 +1,70 @@
+.basicInformationWrapper {
+    width: 600px;
+    height: fit-content;
+    background: #FAFBFF;
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding: 16px;
+}
+
+.settings_title {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    color: #081735;
+}
+
+#liner {
+    width: 75%;
+    height: 2px;
+    background-color: #E6E8F0;
+    border-radius: 4px;
+    margin-top: 1rem;
+}
+
+.settings_label {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    color: #081735;
+}
+
+.settings_input {
+    background: #FFFFFF;
+    border: 1px solid #E6E8F0;
+    border-radius: 8px;
+    outline: 0;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    color: #081735;
+    padding: 3px 8px;
+}
+
+.setting_submit_btn {
+    width: 110px;
+    height: 30px;
+    background: var(--pink);
+    box-shadow: 0px 8px 16px rgba(143, 149, 178, 0.15);
+    border-radius: 8px;
+    border: 0;
+    outline: 0;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    text-align: center;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.delete_team_warning {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    color: #195d77;
+}

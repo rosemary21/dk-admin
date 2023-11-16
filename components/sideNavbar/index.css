@@ -1,0 +1,95 @@
+.admin_sidebar {
+  width: 220px;
+  height: 100vh;
+  border-right: 1px solid #e6e8f0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.admin_sidebar img {
+  margin-top: 1.2rem;
+}
+
+.admin_sidebar a {
+  overflow: hidden;
+}
+
+.admin_sidebar button,
+.side_link {
+  overflow: hidden;
+  width: 100%;
+}
+
+.admin_sidebar .menu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding: 0 20px;
+}
+
+.menu .side-btn {
+  width: 100%;
+  border-radius: 12px;
+  padding: 9px 17px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--blue-text);
+  background-color: var(--white);
+  border: 0;
+  outline: 0;
+  text-transform: capitalize;
+}
+
+.side-btn div {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.side-btn i {
+  font-size: 18px;
+}
+
+.side-icon {
+  font-size: 18px;
+}
+
+.active-side {
+  background-color: var(--pink) !important;
+  color: var(--white) !important;
+}
+
+.dropdown-container {
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: fit-content;
+  overflow: hidden;
+  padding: 0 20px;
+  transition: 400ms;
+}
+
+.dropdown-container a {
+  display: block;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--blue-text);
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}

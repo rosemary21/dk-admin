@@ -1,0 +1,38 @@
+{
+  "adminPage": {
+    "recentCustomers": [
+      {
+        "id": 1,
+        "name": "Jenny Wilson",
+        "image": "/Admin/recent-1.png",
+        "email": "w.lawson@example.com",
+        "price": 11234,
+        "location": "Lagos"
+      },
+      {
+        "id": 2,
+        "name": "Devon Lane",
+        "image": "/Admin/recent-2.png",
+        "email": "dat.roberts@example.com",
+        "price": 11159,
+        "location": "Delta State"
+      },
+      {
+        "id": 3,
+        "name": "Jane Cooper",
+        "image": "/Admin/recent-3.png",
+        "email": "jgraham@example.com",
+        "price": 10483,
+        "location": "Ogun State"
+      },
+      {
+        "id": 4,
+        "name": "Dianne Russell",
+        "image": "/Admin/recent-4.png",
+        "email": "curtis.d@example.com",
+        "price": 9084,
+        "location": "Lagos State"
+      }
+    ]
+  }
+}
