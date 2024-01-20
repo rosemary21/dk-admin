@@ -1,10 +1,12 @@
 import { Table } from "@mantine/core";
 import "../ProductsTable/ProductTable.scss";
 import { ProductCategoryProps } from "@/types";
+
 interface Props {
   productCategories: ProductCategoryProps[] | undefined;
   showUpdateForm: (id: number) => void;
 }
+
 export default function ProductCategoryTable({
   productCategories,
   showUpdateForm,

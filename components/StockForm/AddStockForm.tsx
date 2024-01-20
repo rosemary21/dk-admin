@@ -11,7 +11,6 @@ interface Props {
   show: boolean;
   setShow: Dispatch<SetStateAction<boolean>>;
   products: GetAllProductsProps | undefined;
-  //   productsDescriptions: GetAllProductDescriptionProps | undefined;
   addStockAsync: UseMutateAsyncFunction<
     void,
     Error,
@@ -46,7 +45,6 @@ export default function AddStockForm({
     handleSubmit,
     handleChange,
     handleBlur,
-    setFieldValue,
     errors,
     touched,
   } = useFormik({
@@ -81,121 +79,6 @@ export default function AddStockForm({
     },
   });
   return (
-    // <Drawer
-    //   title="Add a stock"
-    //   placement="right"
-    //   width={500}
-    //   onClose={() => setShow(false)}
-    //   open={show}
-    // >
-    //   <form className="stockForm" onSubmit={handleSubmit}>
-    //     <div className="stockForm_group">
-    //       <label htmlFor="productCode">Product Code</label>
-    //       <select
-    //         value={values.productCode}
-    //         name="productCode"
-    //         id="productCode"
-    //         onChange={handleChange}
-    //         onBlur={handleBlur}
-    //       >
-    //         {products?.productDtoList.map(({ code }) => (
-    //           <option key={code}>{code}</option>
-    //         ))}
-    //       </select>
-    //       {errors.productCode && touched.productCode && (
-    //         <div className="error_message">{errors.productCode}</div>
-    //       )}
-    //     </div>
-
-    //     <div className="stockForm_flex_group">
-    //       <div className="lg">
-    //         <label htmlFor="productDescriptionCode" className="overflow-hidden">
-    //           Product Description Code
-    //         </label>
-    //         <select
-    //           value={values.productDescriptionCode}
-    //           name="productDescriptionCode"
-    //           onChange={handleChange}
-    //           id="productDescriptionCode"
-    //         >
-    //           {productsDescriptions &&
-    //             productsDescriptions.productDescriptionDtoList.map(
-    //               ({ code }) => <option value={code}>{code}</option>
-    //             )}
-    //         </select>
-    //       </div>
-    //       <div className="sm">
-    //         <label htmlFor="productDescriptionCode" className="overflow-hidden">
-    //           PageNo
-    //         </label>
-    //         <select
-    //           value={values.productDescriptionCode}
-    //           name="productDescriptionCode"
-    //           onChange={handleChange}
-    //           id="productDescriptionCode"
-    //         >
-    //           {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((number) => (
-    //             <option key={number}>{number}</option>
-    //           ))}
-    //         </select>
-    //       </div>
-    //       {errors.productCode && touched.productCode && (
-    //         <div className="error_message">{errors.productCode}</div>
-    //       )}
-    //     </div>
-
-    //     <div className="stockForm_group">
-    //       <label htmlFor="productDescription">Product Description</label>
-    //       <input
-    //         value={values.productDescription}
-    //         name="productDescription"
-    //         onChange={handleChange}
-    //         id="productDescription"
-    //         type="text"
-    //         disabled
-    //       />
-    //       {errors.productCode && touched.productCode && (
-    //         <div className="error_message">{errors.productCode}</div>
-    //       )}
-    //     </div>
-
-    //     <div className="stockForm_group">
-    //       <label htmlFor="productType">Product Type</label>
-    //       <input
-    //         value={values.productType}
-    //         onChange={handleChange}
-    //         name="productType"
-    //         id="productType"
-    //         type="text"
-    //       />
-    //       {errors.productCode && touched.productCode && (
-    //         <div className="error_message">{errors.productCode}</div>
-    //       )}
-    //     </div>
-
-    //     <div className="stockForm_group">
-    //       <label htmlFor="quantity">Quantity</label>
-    //       <input
-    //         value={values.quantity}
-    //         onChange={handleChange}
-    //         name="quantity"
-    //         id="quantity"
-    //         type="number"
-    //       />
-    //       {errors.productCode && touched.productCode && (
-    //         <div className="error_message">{errors.productCode}</div>
-    //       )}
-    //     </div>
-
-    //     <button
-    //       className="submit_btn overflow-hidden mt-3"
-    //       disabled={isSubmitting}
-    //     >
-    //       <BsUpload /> Add Stock
-    //     </button>
-    //   </form>
-    // </Drawer>
-
     <Drawer
       title="Add a stock"
       placement="right"
@@ -205,7 +88,7 @@ export default function AddStockForm({
     >
       <form className="stockForm" onSubmit={handleSubmit}>
         <div className="stockForm_group">
-          <label htmlFor="productCode">Product Code</label>
+          <label htmlFor="productCode" className="overflow-hidden">Product Code</label>
           <select
             value={values.productCode}
             name="productCode"
@@ -240,7 +123,7 @@ export default function AddStockForm({
         </div>
 
         <div className="stockForm_group">
-          <label htmlFor="productDescription">Product Description</label>
+          <label htmlFor="productDescription" className="overflow-hidden">Product Description</label>
           <input
             value={values.productDescription}
             name="productDescription"
@@ -255,7 +138,7 @@ export default function AddStockForm({
         </div>
 
         <div className="stockForm_group">
-          <label htmlFor="productType">Product Type</label>
+          <label htmlFor="productType" className="overflow-hidden">Product Type</label>
           <input
             value={values.productType}
             onChange={handleChange}
@@ -270,7 +153,7 @@ export default function AddStockForm({
         </div>
 
         <div className="stockForm_group">
-          <label htmlFor="quantity">Quantity</label>
+          <label htmlFor="quantity" className="overflow-hidden">Quantity</label>
           <input
             value={values.quantity}
             onChange={handleChange}

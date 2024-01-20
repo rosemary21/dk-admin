@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import "./index.css";
-import { LINKS, dker, getToken } from "@/utils/Links";
+import { LINKS } from "@/utils/Links";
 import Link from "next/link";
 import Image from "next/image";
 import { AiOutlineStock } from "react-icons/ai";
@@ -14,6 +14,8 @@ import { SlCompass } from "react-icons/sl";
 import "./index.css";
 import AuthService from "@/services/auth/auth";
 import Loader from "@/utils/Loader";
+import { useDisclosure } from "@mantine/hooks";
+import { Modal } from "@mantine/core";
 
 interface Props {
   active:
@@ -42,6 +44,7 @@ export default function SideNavbar({ active }: Props) {
   const [activeSide, setActiveSide] = useState(active);
   const [dropdown, setDropdown] = useState("none");
   const { loginLoader, error, setError, logOutAPI } = AuthService();
+  const [opened, { open, close }] = useDisclosure(false);
 
   function productDropdown() {
     if (dropdown === "none") {
@@ -220,7 +223,7 @@ export default function SideNavbar({ active }: Props) {
           </button>
         </Link>
         <button
-          onClick={signOutAdmin}
+          onClick={open}
           className={
             activeSide === ACTIVE.LogOut
               ? "side-btn active-side side_link"
@@ -234,6 +237,29 @@ export default function SideNavbar({ active }: Props) {
         </button>
       </div>
       {loginLoader && <Loader />}
+
+      <Modal
+        opened={opened}
+        onClose={close}
+        centered
+        withCloseButton={false}
+        shadow="lg"
+        transitionProps={{ duration: 200, transition: "slide-down" }}
+      >
+        <div className="flex flex-col gap-6 py-5">
+          <h5 className="font-semibold text-lg text-center">
+            Are you sure you want to logout?
+          </h5>
+          <div className="w-full flex items-center gap-8 overflow-hidden">
+            <button onClick={signOutAdmin} className="btn_primary">
+              Signout
+            </button>
+            <button onClick={close} className="btn_primary btn_2">
+              Cancel
+            </button>
+          </div>
+        </div>
+      </Modal>
     </aside>
   );
 }

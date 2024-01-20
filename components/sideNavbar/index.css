@@ -50,6 +50,11 @@
   border: 0;
   outline: 0;
   text-transform: capitalize;
+  transition: all 400ms;
+}
+
+.menu .side-btn:hover {
+  color: var(--pink);
 }
 
 .side-btn div {
@@ -67,6 +72,12 @@
 }
 
 .active-side {
+  background-color: var(--pink) !important;
+  color: var(--white) !important;
+  transition: 400ms;
+}
+
+.active-side:hover {
   background-color: var(--pink) !important;
   color: var(--white) !important;
 }
@@ -92,4 +103,9 @@
   display: flex;
   align-items: center;
   gap: 13px;
+  transition: 400ms;
+}
+
+.dropdown-container a:hover {
+  color: var(--pink);
 }
