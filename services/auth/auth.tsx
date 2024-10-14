@@ -17,7 +17,7 @@ const AuthService = () => {
 
   const loginAPI = async (payload: { userName: string; password: string }) => {
     const url =
-      (process.env.NEXT_PUBLIC_BASE_URL as string) + "/api/v1/login/staff";
+      (process.env.NEXT_PUBLIC_BASE_URL as string) + "/api/v1/login/admin";
     const data = JSON.stringify(payload);
     const config = {
       method: "post",
